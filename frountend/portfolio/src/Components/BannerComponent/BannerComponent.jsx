@@ -1,6 +1,7 @@
 import React from "react";
 import CustomButtonComponent from "../CustomButtonComponent/CustomButtonComponent";
 import CreativHeadingComponent from "../CreativHeadingComponent/CreativHeadingComponent";
+import IconComponent from "../IconComponent/IconComponent";
 
 import "./BannerComponent.css";
 
@@ -22,7 +23,14 @@ function BannerComponent() {
                             <CustomButtonComponent cl={"Learn_more_btn"} />
                         </div>
                     </div>
-                    <div className="col-12 col-sm-12 col-md-2"></div>
+                    <div className="col-12 col-sm-12 col-md-2 d-flex justify-content-end pe-5">
+                        <div className="mt-5">
+                            <IconComponent icon={"fab fa-facebook-f"} />
+                            <IconComponent icon={"fab fa-twitter"} />
+                            <IconComponent icon={"fab fa-instagram"} />
+                            <IconComponent icon={"fab fa-linkedin"} />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

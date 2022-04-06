@@ -25,6 +25,7 @@ code {
     --darkGray: #161616;
     --dark: #040101;
     --lightSm: #949494;
+    --smLight: #3636361a;
 }
 /* colors */
 
@@ -42,7 +43,7 @@ a {
 }
 
 .top_padding {
-    padding: 60px 0;
+    padding-top: 60px;
 }
 
 .top_padding_tow {
