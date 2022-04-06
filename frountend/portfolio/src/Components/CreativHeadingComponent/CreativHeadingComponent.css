@@ -1,0 +1,8 @@
+.Creative_heading {
+    color: var(--mainColor);
+    font-size: 100px;
+}
+
+.Creative_heading span {
+    font-weight: 100;
+}
