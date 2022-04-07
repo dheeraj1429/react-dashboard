@@ -21,6 +21,19 @@ function AbouMeComponent() {
                     <ProjectCardComponent
                         Link={"https://yt-clone-react-app.herokuapp.com/"}
                         repoLink={"https://github.com/dheeraj1429/react-youtube-clone"}
+                        heading={"React youtube clone"}
+                        subHeading={
+                            "Designed the interface of a TV show tracking app and content hunting app downloaded by 100K  users."
+                        }
+                        bg={"/images/movi-app.jpg"}
+                    />
+
+                    <ProjectCardComponent
+                        Link={"https://dameda-ecommerce-app.herokuapp.com/"}
+                        repoLink={"https://github.com/dheeraj1429/Damita-Ecommerce.git"}
+                        heading={"Dameda Ecommerce Website"}
+                        subHeading={"Created this concept watch face animation for a smart ecommerce website"}
+                        bg={"/images/ec.jpeg"}
                     />
                 </div>
             </div>
