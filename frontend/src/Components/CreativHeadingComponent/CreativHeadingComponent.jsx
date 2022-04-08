@@ -1,6 +1,5 @@
 import React from "react";
 import * as Creative from "./CreativeHeadingComponent.style";
-import "./CreativHeadingComponent.css";
 
 function CreativHeadingComponent({ Heading, subHeading, cl }) {
     return (

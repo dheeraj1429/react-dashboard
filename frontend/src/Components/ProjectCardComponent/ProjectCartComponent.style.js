@@ -8,9 +8,9 @@ export const imagePrv = styled.div`
     height: 100%;
     top: 0;
     left: 0;
-    border-radius: 20px;
+    border-radius: 10px;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     transition: all 0.3s ease;
     &:before {
         content: "";
@@ -35,6 +35,7 @@ export const ProjectCartDiv = styled.div`
     position: relative;
     overflow: hidden;
     border-radius: 20px;
+    margin-top: 2rem;
     &:hover .img_prev_div {
         transform: scale(1.2);
     }
@@ -43,7 +44,7 @@ export const ProjectCartDiv = styled.div`
     }
     &:hover .img_prev_div {
         &:before {
-            opacity: 0.8;
+            opacity: 0.3;
             transform: scale(0.7);
             border-radius: 10px;
         }
@@ -71,7 +72,7 @@ export const p = styled.p`
     color: var(--lightSm);
     letter-spacing: normal;
     line-height: normal;
-    font-size: 14px;
+    font-size: 12px;
 `;
 
 export const i = styled.i`

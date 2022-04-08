@@ -1,18 +1,23 @@
 import React, { useState } from "react";
-import * as ProjectCart from "./ProjectCartComponent.style";
 import { AgenceBoldHading } from ".././AgencyComponent/AgencyComponent.style";
 
-function ProjectCardComponent({ Link, repoLink, heading, subHeading, bg, cl }) {
+import * as ProjectCart from "./ProjectCartComponent.style";
+
+function ProjectCardComponent({ Link, repoLink, heading, subHeading, bg, cl, icon }) {
     const [Icons, setIcons] = useState([
-        { el: "fas fa-search", link: Link },
+        { el: icon, link: Link },
         { el: "fas fa-code", link: repoLink },
     ]);
+
     return (
         <ProjectCart.div
-            className={
-                !cl
-                    ? "col-12 col-sm-12 col-md-4 mt-4 products_card_div"
-                    : `col-12 col-sm-12 col-md-4 mt-4 products_card_div ${cl}`
+            className={`col-12 col-sm-12 col-md-4 project_card_div`}
+            style={
+                cl
+                    ? {
+                          marginTop: "40px",
+                      }
+                    : null
             }
         >
             <ProjectCart.ProjectCartDiv>
