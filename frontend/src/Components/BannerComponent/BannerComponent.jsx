@@ -7,8 +7,9 @@ import * as Banner from "./BannerComponent-style";
 
 function BannerComponent() {
     return (
-        <Banner.BannerDiv>
+        <Banner.section id="home">
             <Banner.Div className="container-fluid side_padding">
+                <video src="/videos/a.mp4" autoPlay muted loop playsInline className="banner_video"></video>
                 <Banner.Div className="row py-5">
                     <Banner.Div className="col-12 col-sm-12 col-md-4"></Banner.Div>
                     <Banner.Div className="col-12 col-sm-12 col-md-6 text-end">
@@ -20,7 +21,7 @@ function BannerComponent() {
                         </Banner.BannerBoldHeading>
 
                         <Banner.Div className="mt-4">
-                            <CustomButtonComponent cl={"Learn_more_btn"} />
+                            <CustomButtonComponent cl={"Learn_more_btn"} target={"aboutUs"} />
                         </Banner.Div>
                     </Banner.Div>
                     <Banner.Div className="col-12 col-sm-12 col-md-2 d-flex justify-content-end pe-5">
@@ -33,7 +34,7 @@ function BannerComponent() {
                     </Banner.Div>
                 </Banner.Div>
             </Banner.Div>
-        </Banner.BannerDiv>
+        </Banner.section>
     );
 }
 

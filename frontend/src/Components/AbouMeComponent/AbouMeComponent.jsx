@@ -2,11 +2,11 @@ import React from "react";
 import CreativHeadingComponent from "../CreativHeadingComponent/CreativHeadingComponent";
 import ProjectCardComponent from "../ProjectCardComponent/ProjectCardComponent";
 import ProjectVideoComponent from "../ProjectVideoComponent/ProjectVideoComponent";
-import { Div, Agencypara, AgenceDiv, AgenceBoldHading } from "../AgencyComponent/AgencyComponent.style";
+import { Agencypara, AgenceDiv, AgenceBoldHading, Section } from "../AgencyComponent/AgencyComponent.style";
 
 function AbouMeComponent() {
     return (
-        <Div className="agency_section_div about_me_div top_padding">
+        <Section className="agency_section_div about_me_div top_padding" id="Projects">
             <AgenceDiv className="container-fluid pb-5">
                 <AgenceDiv className="row side_padding">
                     <AgenceDiv className="col-12 text-center">
@@ -57,17 +57,7 @@ function AbouMeComponent() {
                         icon={"fas fa-search"}
                     />
 
-                    {/* <ProjectCardComponent
-                        Link={"https://codepen.io/Dee_art_3d/pen/XWMvNob?editors=0010"}
-                        repoLink={"https://codepen.io/Dee_art_3d/pen/XWMvNob?editors=0010"}
-                        heading={"HTML CSS JS Wether App"}
-                        subHeading={"Created this concept watch face animation for a smart ecommerce website"}
-                        bg={"/images/wether.jpg"}
-                        cl={"cart_extra_cl"}
-                        icon={"fas fa-search"}
-                    /> */}
-
-                    <ProjectVideoComponent cl={"extra_cl"} />
+                    <ProjectVideoComponent cl={"extra_cl"} src={"/videos/vide1.mp4"} />
 
                     <ProjectCardComponent
                         Link={"https://github.com/dheeraj1429?tab=repositories"}
@@ -77,9 +67,34 @@ function AbouMeComponent() {
                         bg={"/images/project.jpg"}
                         icon={"fab fa-github"}
                     />
+
+                    <ProjectVideoComponent
+                        src={
+                            "https://uploads-ssl.webflow.com/5efbc66bfe713c08511b3024/61222b846f858e5342cf168f_Watch%20AI-Dribbble%20Shot%202-transcode.mp4"
+                        }
+                    />
+
+                    <ProjectCardComponent
+                        Link={"https://codepen.io/Dee_art_3d/pen/XWMvNob?editors=0010"}
+                        repoLink={"https://codepen.io/Dee_art_3d/pen/XWMvNob?editors=0010"}
+                        heading={"HTML CSS JS Wether App"}
+                        subHeading={"Created this concept watch face animation for a smart ecommerce website"}
+                        bg={"/images/wether.jpg"}
+                        cl={"cart_extra_cl"}
+                        icon={"fas fa-search"}
+                    />
+
+                    <ProjectCardComponent
+                        Link={"https://github.com/dheeraj1429/Js-Revision"}
+                        repoLink={"https://github.com/dheeraj1429/js-projects"}
+                        heading={"All JS Projects"}
+                        subHeading={"Created this concept watch face animation for a smart ecommerce website"}
+                        bg={"/images/cor.jpg"}
+                        icon={"fab fa-github"}
+                    />
                 </AgenceDiv>
             </AgenceDiv>
-        </Div>
+        </Section>
     );
 }
 

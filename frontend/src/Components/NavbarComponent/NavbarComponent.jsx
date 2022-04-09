@@ -1,9 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NavItemComponent from "../NavItemComponent/NavItemComponent";
 import * as Navbar from "./NavbarComponent.style";
 
 function NavbarComponent() {
     const [LightNv, setLightNv] = useState(false);
+    const [TargetId, setTargetId] = useState("");
+
+    const section = document.querySelectorAll("section");
+
+    const observerFunction = function () {
+        const option = {
+            root: null,
+            threshold: 0,
+            rootMargin: "-120px",
+        };
+
+        const callback = function (entries, observe) {
+            entries.forEach((e) => {
+                if (!e.isIntersecting) return;
+
+                const target = e.target;
+                const id = target.getAttribute("id");
+                setTargetId(id);
+            });
+        };
+
+        const observr = new IntersectionObserver(callback, option);
+
+        section.forEach((el) => {
+            observr.observe(el);
+        });
+    };
 
     const scrollFuntion = function () {
         window.addEventListener("scroll", function (e) {
@@ -15,7 +42,10 @@ function NavbarComponent() {
         });
     };
 
-    scrollFuntion();
+    useEffect(() => {
+        observerFunction();
+        scrollFuntion();
+    }, []);
 
     return (
         <Navbar.NavbarDivComponent
@@ -32,10 +62,10 @@ function NavbarComponent() {
                     <Navbar.NavDiv className="col-12 col-sm-12 col-md-2"></Navbar.NavDiv>
                     <Navbar.NavDiv className="col-12 col-sm-12 col-md-8">
                         <Navbar.NavbarUl>
-                            <NavItemComponent innerText={"Home"} />
-                            <NavItemComponent innerText={"About Us"} />
-                            <NavItemComponent innerText={"Our Work"} />
-                            <NavItemComponent innerText={"Blog"} />
+                            <NavItemComponent innerText={"Home"} value={TargetId} />
+                            <NavItemComponent innerText={"About Us"} value={TargetId} />
+                            <NavItemComponent innerText={"creative"} value={TargetId} />
+                            <NavItemComponent innerText={"Projects"} value={TargetId} />
                         </Navbar.NavbarUl>
                     </Navbar.NavDiv>
                     <Navbar.NavDiv className="col-12 col-sm-12 col-md-2 d-flex justify-content-end pe-5">

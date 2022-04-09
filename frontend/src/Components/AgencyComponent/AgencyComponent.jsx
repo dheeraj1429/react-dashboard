@@ -5,7 +5,7 @@ import * as Agency from "./AgencyComponent.style";
 
 function AgencyComponent() {
     return (
-        <Agency.Div className="top_padding">
+        <Agency.Section className="top_padding" id="aboutUs">
             <Agency.AgenceDiv className="container-fluid side_padding">
                 <Agency.AgenceDiv className="row py-5 justify-content-center">
                     <Agency.AgenceDiv className="col-12 col-sm-12 col-md-5"></Agency.AgenceDiv>
@@ -26,7 +26,7 @@ function AgencyComponent() {
                     </Agency.AgenceDiv>
                 </Agency.AgenceDiv>
 
-                <Agency.AgenceDiv className="row py-4 justify-content-center">
+                <Agency.AgenceDiv className="row pt-4 pb-5 justify-content-center">
                     <IconWithContentComponent
                         icon={"fas fa-lightbulb"}
                         conetnt={"We have some investment ideas for you."}
@@ -35,7 +35,7 @@ function AgencyComponent() {
                     <IconWithContentComponent icon={"fas fa-heart"} conetnt={"We love our valued customers"} />
                 </Agency.AgenceDiv>
             </Agency.AgenceDiv>
-        </Agency.Div>
+        </Agency.Section>
     );
 }
 

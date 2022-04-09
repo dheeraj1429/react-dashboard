@@ -5,6 +5,7 @@ export const NavbarDivComponent = styled.div`
     width: 100%;
     top: 0;
     transition: all 0.3s ease;
+    z-index: 100;
 `;
 
 export const NavbarUl = styled.ul`

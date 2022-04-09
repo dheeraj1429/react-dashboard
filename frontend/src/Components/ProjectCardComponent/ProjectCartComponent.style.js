@@ -27,7 +27,7 @@ export const imagePrv = styled.div`
 
 export const ProjectCartDiv = styled.div`
     width: 100%;
-    height: 600px;
+    height: 400px;
     transition: all 0.3s ease;
     display: flex;
     justify-content: center;
@@ -44,7 +44,7 @@ export const ProjectCartDiv = styled.div`
     }
     &:hover .img_prev_div {
         &:before {
-            opacity: 0.3;
+            opacity: 0.2;
             transform: scale(0.7);
             border-radius: 10px;
         }
